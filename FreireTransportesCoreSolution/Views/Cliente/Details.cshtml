@@ -1,0 +1,135 @@
+﻿@model FreireTransportesCoreSolution.Models.Cliente
+
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Lista Clientes";
+	
+}
+
+@section Styles {
+    <!-- Bootstrap 5 -->
+    <!--Já incluido através do _Layout.cshtml-->
+    <!-- DataTables Core CSS -->
+    <link href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap4.css" rel="stylesheet">
+
+    
+	<style>
+		/* Estilo para campos obrigatórios */
+		.required::after {
+			content: " *"; /* Adiciona o asterisco */
+			color: red; /* Torna o asterisco vermelho */
+		}
+
+		/* Estilo para campos obrigatórios quando o campo é válido */
+		input[required]:valid {
+			border-color: green;
+		}
+
+		.titulo {
+			font-size: 2rem;
+			font-weight: bold;
+			color: #007bff;
+			text-align: center;
+			margin: 2px;
+		}
+
+        /* Reduzindo a espessura das bordas */
+        table.dataTable thead th {
+            border-bottom: 1px solid #dee2e6 !important; /* Linha mais fina e clara */
+        }
+
+        /* Removendo as bordas extras */
+        table.dataTable.no-border {
+            border-collapse: collapse;
+        }
+
+            table.dataTable.no-border tbody td,
+            table.dataTable.no-border tbody th {
+                border: none !important; /* Sem bordas nas células do corpo */
+            }
+	</style>
+}
+<h3 class="text-center mt-2">Lista de Clientes</h3>
+
+<hr />
+<div class="row p-3">
+
+        <div class="container mt-5">
+			<table id="tableClientes" class="table table-striped no-border" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Nome</th>
+                        <th>CPF/CNPJ</th>
+                        <th>Telefone</th>
+                        <th>Celular</th>
+                        <th>E-mail</th>
+                        <th>Data de Registro</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="tClientes">
+                    @foreach (var cliente in Model.clientes)
+                    {
+                        <tr id="cliente_@cliente.idCliente">
+                            <td>@cliente.rTipoCliente</td>
+                            <td>@cliente.rNome</td>
+                            <td>@cliente.rCpfCnpj</td>
+                            <td>@cliente.rTelefone</td>
+                            <td>@cliente.rCelular</td>
+                            <td>@cliente.rEmail</td>
+                            <td>@cliente.dDataRegistro</td>
+                            <td>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <!-- Botão Alterar -->
+                                <button type="button" class="btn btn-sm btn-primary flex-md-grow-1 me-2 shadow-none" onclick="location.href='@Url.Action("Alterar", "Cliente", new { id = cliente.idCliente})'">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <!-- Botão Detalhar --> 
+                                    <button type="button" class="btn btn-sm btn-info text-white flex-md-grow-1 me-2 shadow-none">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                    <!-- Botão Excluir -->
+                                    <button type="button" class="btn btn-sm btn-danger flex-md-grow-1 me-2 shadow-none">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap4.js"></script>
+
+
+	<script>
+		$(document).ready(function () {
+
+               $('#tableClientes').DataTable({
+                pageLength: 5, // Exibe 5 registros por página
+                lengthMenu: [5, 10, 25, 50], // Opções de seleção de quantidade de registros
+                responsive: true,
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/pt-BR.json'
+                }
+            });
+
+
+		});
+
+
+
+	</script>
+}
