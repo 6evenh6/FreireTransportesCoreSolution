@@ -6,12 +6,6 @@
 }
 
 @section Styles {
-    <!-- Bootstrap 5 -->
-    <!--Já incluido através do _Layout.cshtml-->
-    <!-- DataTables Core CSS -->
-    @* <link href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap4.css" rel="stylesheet"> *@
-
-
     <style>
         /* Estilo para campos obrigatórios */
         .required::after {
@@ -39,8 +33,9 @@
 <hr />
 <div class="row p-3">
 
-    <form method="post" action="@Url.Action("SalvarAlteracao", "Cliente")" class="w-100">
+    <form method="post" action="@Url.Action("Alterar", "Cliente", new { id = Model.idCliente })" class="w-100">
         @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.idCliente)
         <div class="row mb-3">
             <div class="col-md-4">
                 @Html.LabelFor(m => m. rNome, new { @class = "form-label required" })
@@ -53,9 +48,9 @@
                 @Html.ValidationMessageFor(m => m.rCpfCnpj, null, new { @class = "text-danger" })
             </div>
             <div class="col-md-4">
-                @Html.LabelFor(m => m.rTipoCliente, new { @class = "form-label required" })
-                @Html.DropDownListFor(m => m.rTipoCliente, new SelectList(new[] { "", "Pessoa Física", "Pessoa Jurídica" }), new { @class = "form-select" })
-                @Html.ValidationMessageFor(m => m.rTipoCliente, null, new { @class = "text-danger" })
+                @Html.LabelFor(m => m.cTipoCliente, new { @class = "form-label required" })
+                @Html.DropDownListFor(m => m.cTipoCliente, new SelectList(Model.optionsCliente, "Value", "Text"), "Selecione...", new { @class = "form-select select2 w-100" })
+                @Html.ValidationMessageFor(m => m.cTipoCliente, null, new { @class = "text-danger" })
             </div>
         </div>
 
@@ -112,7 +107,7 @@
 
         <div class="row mb-3">
             <div class="col-md-6">
-                <button type="submit" class="btn btn-success w-100">Alterar</button>
+                <button type="submit" class="btn btn-success w-100">Salvar Alteração</button>
             </div>
             <div class="col-md-6">
                 <button type="button" class="btn btn-secondary w-100" onclick="window.history.back()">Voltar</button>
@@ -123,18 +118,33 @@
 </div>
 
 @section Scripts {
-    @* @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    } *@
-
-    @* <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> *@
-    @* <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script> *@
-    @* <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script> *@
-    @* <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap4.js"></script> *@
-
 
     <script>
         $(document).ready(function () {
+            // Máscara para telefone
+            $('#rCelular').mask('(00) 00000-0000');
+            $('#rTelefone').mask('(00) 0000-0000');
+
+            //Mascara dupla para CPF e CNPJ
+            var options = {
+                onKeyPress: function (cpf, ev, el, op) {
+                    var masks = ['000.000.000-000', '00.000.000/0000-00'];
+                    $('#rCpfCnpj').mask((cpf.length > 14) ? masks[1] : masks[0], op);
+                }
+            }
+            $('#rCpfCnpj').length > 11 ? $('#rCpfCnpj').mask('00.000.000/0000-00', options) : $('#rCpfCnpj').mask('000.000.000-00#', options);
+
+
+            // Impede que caracteres não-numéricos sejam digitados
+            $('#cNumero').on('input', function (e) {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+
+            $('#rTipoCliente').select2();
+
+            //Valida o formulário usando jquery e validation
+            // Inicializa a validação do formulário
+            $.validator.unobtrusive.parse("#formCliente");
 
         });
 

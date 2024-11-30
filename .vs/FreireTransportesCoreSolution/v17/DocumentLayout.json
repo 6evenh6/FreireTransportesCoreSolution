@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|d:\\_desenvolvimento\\freiretransportescoresolution\\freiretransportescoresolution\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|solutionrelative:freiretransportescoresolution\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|d:\\_desenvolvimento\\freiretransportescoresolution\\freiretransportescoresolution\\models\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|solutionrelative:freiretransportescoresolution\\models\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|d:\\_desenvolvimento\\freiretransportescoresolution\\freiretransportescoresolution\\views\\cliente\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|solutionrelative:freiretransportescoresolution\\views\\cliente\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|d:\\_desenvolvimento\\freiretransportescoresolution\\freiretransportescoresolution\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|solutionrelative:freiretransportescoresolution\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|d:\\_desenvolvimento\\freiretransportescoresolution\\freiretransportescoresolution\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|solutionrelative:freiretransportescoresolution\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|d:\\_desenvolvimento\\freiretransportescoresolution\\freiretransportescoresolution\\views\\cliente\\alterar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|solutionrelative:freiretransportescoresolution\\views\\cliente\\alterar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|d:\\_desenvolvimento\\freiretransportescoresolution\\freiretransportescoresolution\\views\\cliente\\listarclientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|solutionrelative:freiretransportescoresolution\\views\\cliente\\listarclientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|d:\\_desenvolvimento\\freiretransportescoresolution\\freiretransportescoresolution\\views\\cliente\\cliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|solutionrelative:freiretransportescoresolution\\views\\cliente\\cliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|d:\\_desenvolvimento\\freiretransportescoresolution\\freiretransportescoresolution\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|solutionrelative:freiretransportescoresolution\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|d:\\_desenvolvimento\\freiretransportescoresolution\\freiretransportescoresolution\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1B5A939-0A23-4710-A825-C5E2F828A761}|FreireTransportesCoreSolution\\FreireTransportesCoreSolution.csproj|solutionrelative:freiretransportescoresolution\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 25,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,52 +118,88 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Models\\Cliente.cs",
-              "RelativeDocumentMoniker": "FreireTransportesCoreSolution\\Models\\Cliente.cs",
-              "ToolTip": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Models\\Cliente.cs",
-              "RelativeToolTip": "FreireTransportesCoreSolution\\Models\\Cliente.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA7wDEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:17:42.153Z",
-              "EditorCaption": ""
+              "DocumentIndex": 4,
+              "Title": "Cliente.cshtml",
+              "DocumentMoniker": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Views\\Cliente\\Cliente.cshtml",
+              "RelativeDocumentMoniker": "FreireTransportesCoreSolution\\Views\\Cliente\\Cliente.cshtml",
+              "ToolTip": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Views\\Cliente\\Cliente.cshtml",
+              "RelativeToolTip": "FreireTransportesCoreSolution\\Views\\Cliente\\Cliente.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-30T16:20:26.698Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Alterar.cshtml",
+              "DocumentMoniker": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Views\\Cliente\\Alterar.cshtml",
+              "RelativeDocumentMoniker": "FreireTransportesCoreSolution\\Views\\Cliente\\Alterar.cshtml",
+              "ToolTip": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Views\\Cliente\\Alterar.cshtml",
+              "RelativeToolTip": "FreireTransportesCoreSolution\\Views\\Cliente\\Alterar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-30T15:59:36.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ListarClientes.cshtml",
+              "DocumentMoniker": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Views\\Cliente\\ListarClientes.cshtml",
+              "RelativeDocumentMoniker": "FreireTransportesCoreSolution\\Views\\Cliente\\ListarClientes.cshtml",
+              "ToolTip": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Views\\Cliente\\ListarClientes.cshtml",
+              "RelativeToolTip": "FreireTransportesCoreSolution\\Views\\Cliente\\ListarClientes.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAAewEUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-30T14:04:11.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Program.cs",
               "RelativeDocumentMoniker": "FreireTransportesCoreSolution\\Program.cs",
               "ToolTip": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Program.cs",
               "RelativeToolTip": "FreireTransportesCoreSolution\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAWwDoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:18:49.099Z"
+              "WhenOpened": "2024-11-30T14:03:56.669Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "FreireTransportesCoreSolution\\Controllers\\ClienteController.cs",
+              "ToolTip": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "FreireTransportesCoreSolution\\Controllers\\ClienteController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAqwDsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T16:04:45.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "FreireTransportesCoreSolution\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "FreireTransportesCoreSolution\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFwAAABpAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-27T19:37:52.983Z"
+              "WhenOpened": "2024-11-30T14:06:12.593Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Views\\Cliente\\Index.cshtml",
-              "RelativeDocumentMoniker": "FreireTransportesCoreSolution\\Views\\Cliente\\Index.cshtml",
-              "ToolTip": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Views\\Cliente\\Index.cshtml",
-              "RelativeToolTip": "FreireTransportesCoreSolution\\Views\\Cliente\\Index.cshtml",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAmwHYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-27T19:52:38.428Z"
+              "DocumentIndex": 0,
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Models\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "FreireTransportesCoreSolution\\Models\\ClienteRepository.cs",
+              "ToolTip": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Models\\ClienteRepository.cs",
+              "RelativeToolTip": "FreireTransportesCoreSolution\\Models\\ClienteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T21:05:02.257Z",
+              "EditorCaption": ""
             }
           ]
         }

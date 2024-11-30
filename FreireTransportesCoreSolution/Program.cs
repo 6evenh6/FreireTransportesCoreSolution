@@ -8,11 +8,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<IDbConnection>((sp) => 
 new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Registrar o repositório e o serviço
+builder.Services.AddScoped<ClienteRepository>(); 
+builder.Services.AddScoped<ClienteService>();
+
 
 // Adicionar suporte a MVC e Razor Pages
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages()
-    .AddViewOptions(options => options.HtmlHelperOptions.ClientValidationEnabled = false);
+    .AddViewOptions(options => options.HtmlHelperOptions.ClientValidationEnabled = true);
+
+
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -34,23 +40,23 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.UseCors("AllowAllOrigins");
+
 // Configurar rotas para Razor Pages e MVC
 
 
-app.MapControllerRoute(
-    name: "Alterar", 
-    pattern: "Cliente/Alterar/{id}", 
-    defaults: new { controller = "Cliente", action = "Alterar" });
+//app.MapControllerRoute(
+//    name: "Alterar", 
+//    pattern: "Cliente/Alterar/{id}", 
+//    defaults: new { controller = "Cliente", action = "Alterar" });
 
-app.MapControllerRoute(
-    name: "Details",
-    pattern: "Cliente/Details",
-    defaults: new { controller = "Cliente", action = "Details" });
+//app.MapControllerRoute(
+//    name: "Details",
+//    pattern: "Cliente/Details",
+//    defaults: new { controller = "Cliente", action = "Details" });
 
-app.MapControllerRoute(
-    name: "Index",
-    pattern: "Cliente",
-    defaults: new { controller = "Cliente", action = "Index" });
+app.MapControllerRoute(name: "Cliente", pattern: "{controller=Cliente}/{action=Cliente}");
+app.MapControllerRoute(name: "ListarClientes", pattern: "{controller=Cliente}/{action=ListarClientes}");
 
 app.MapControllerRoute(
     name: "default",

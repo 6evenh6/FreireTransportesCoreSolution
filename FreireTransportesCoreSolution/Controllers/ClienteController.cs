@@ -1,69 +1,73 @@
-﻿using Dapper;
-using FreireTransportesCoreSolution.Models;
-using Microsoft.AspNetCore.Http;
+﻿using FreireTransportesCoreSolution.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
-using System.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace FreireTransportesCoreSolution.Controllers
 {
+    [Route("Cliente")]
     public class ClienteController : Controller
     {
-        private readonly IDbConnection _dbConnection;
-        public ClienteController(IConfiguration configuration) 
+        private readonly ClienteService _clienteService;
+        public ClienteController(ClienteService clienteService)
         {
-            _dbConnection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")); 
+            _clienteService = clienteService;
         }
 
 
-        [HttpGet]
-        public IActionResult Index(Cliente _Model)
+        [HttpGet("NovoCliente")]
+        public IActionResult Cliente()
         {
-            
-            return View();
+            return View(_clienteService.PrepararClienteComTipos());
         }
 
-
-        [HttpGet]
-        public IActionResult Details(Cliente _Model)
+        [HttpPost("NovoCliente")]
+        public IActionResult Cliente(Cliente model)
         {
-            _Model = new Cliente();
-            _Model.clientes = _dbConnection.Query<Cliente>("SELECT * FROM tCliente");
+            if (ModelState.IsValid)
+            { // Lógica de gravação no banco de dados
+                _clienteService.AddCliente(model);
+                return RedirectToAction("ListarClientes"); 
+            } 
+            else 
+            { 
+                return View(_clienteService.PrepararClienteComTipos()); 
+            }
+        }
 
-            return View(_Model);
-            
+        [HttpGet("ListarClientes")]
+        public IActionResult ListarClientes()
+        {
+            var clientes = _clienteService.ListarClientes(); 
+            return View(clientes);
         }
 
         [HttpGet("Alterar/{id}")]
-        public IActionResult Alterar(int? id, Cliente _Model)
+        public IActionResult Alterar(int id) 
         {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            // Simulação de busca de cliente por ID (substitua com sua lógica)
-            // Obtenha o cliente pelo ID (substitua com sua lógica de obtenção de dados)
-
-            var sql = "SELECT * FROM tCliente WHERE idCliente = @Id"; 
-
-            var cliente = _dbConnection.QuerySingleOrDefault<Cliente>(sql, new { Id = id }); 
-
+            var cliente = _clienteService.ObterClientePorId(id);
             if (cliente == null) 
             {
                 return NotFound(); 
-            } 
-            
-            return View(cliente);
-
+            }
+            cliente.optionsCliente = _clienteService.ListarTiposCliente().ToList();
+            return View(cliente); 
         }
-        [HttpPost]
-        public IActionResult SalvarAlteracao(Cliente _Model)
+
+        [HttpPost("Alterar/{id}")]
+        public IActionResult Alterar(Cliente model)
         {
-            _Model = new Cliente();
-
-            return View();
+            if (ModelState.IsValid) 
+            { 
+                _clienteService.AtualizarCliente(model); 
+                return RedirectToAction("ListarClientes"); 
+            }
+            else
+            { 
+                // Recarregar as opções em caso de falha de validação
+                model.optionsCliente = _clienteService.ListarTiposCliente().ToList(); 
+                
+                return View(model); 
+            } 
         }
-
-
     }
 }

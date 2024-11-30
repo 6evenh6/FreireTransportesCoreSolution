@@ -52,12 +52,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxBbHRlcmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/_Desenvolvimento/FreireTransportesCoreSolution/FreireTransportesCoreSolution/Views/Cliente/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxEZXRhaWxzLmNzaHRtbA==
+[D:/_Desenvolvimento/FreireTransportesCoreSolution/FreireTransportesCoreSolution/Views/Cliente/Cliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDbGllbnRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/_Desenvolvimento/FreireTransportesCoreSolution/FreireTransportesCoreSolution/Views/Cliente/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
+[D:/_Desenvolvimento/FreireTransportesCoreSolution/FreireTransportesCoreSolution/Views/Cliente/ListarClientes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxMaXN0YXJDbGllbnRlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/_Desenvolvimento/FreireTransportesCoreSolution/FreireTransportesCoreSolution/Views/Shared/_ValidationScriptsPartial.cshtml]

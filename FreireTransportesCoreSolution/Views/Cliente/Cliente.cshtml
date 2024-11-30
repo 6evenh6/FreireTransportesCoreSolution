@@ -24,7 +24,7 @@
 
 <hr/>
     <div class="row p-3">
-            <form asp-action="Cliente" class="w-100">
+            <form id="formCliente" method="post" asp-action="Cliente" asp-controller="Cliente" class="w-100">
 
                 <div class="row mb-3">
                     <div class="col-md-4">
@@ -34,50 +34,42 @@
                     </div>
                     <div class="col-md-4">
                             @Html.LabelFor(m => m.rCpfCnpj, new { @class = "form-label" })
-                            @Html.TextBoxFor(m => m.rCpfCnpj, new { @class = "form-control", placeholder = "Digite o CPF ou CNPJ.", required = false })
-                            @Html.ValidationMessageFor(m => m.rCpfCnpj, null, new { @class = "text-danger" })
+                            @Html.TextBoxFor(m => m.rCpfCnpj, new { @class = "form-control", placeholder = "Digite o CPF ou CNPJ." })
                     </div>
                     <div class="col-md-4">
-                        @Html.LabelFor(m => m.rTipoCliente, new { @class = "form-label required" })
-                        @Html.DropDownListFor(m => m.rTipoCliente, new SelectList(new[] { "","Pessoa Física", "Pessoa Jurídica" }), new { @class = "form-select" })
-                        @Html.ValidationMessageFor(m => m.rTipoCliente, null, new { @class = "text-danger" })
+                        @Html.LabelFor(m => m.cTipoCliente, new { @class = "form-label required" })
+                        @Html.DropDownListFor(m => m.cTipoCliente, new SelectList(Model.optionsCliente, "Value", "Text"), "Selecione...",new { @class = "form-select select2 w-100" })
+                        @Html.ValidationMessageFor(m => m.cTipoCliente, null, new { @class = "text-danger" })
                     </div>
                 </div>
-
                 <div class="row mb-3">
                     <div class="col-md-4">
                         @Html.LabelFor(m => m.rEmail, new { @class = "form-label" })
                         @Html.TextBoxFor(m => m.rEmail, new { @class = "form-control", placeholder = "Digite o e-mail" })
-                        @Html.ValidationMessageFor(m => m.rEmail, null, new { @class = "text-danger" })
                     </div>
                     <div class="col-md-4">
                         @Html.LabelFor(m => m.rTelefone, new { @class = "form-label" })
-                        @Html.TextBoxFor(m => m.rTelefone, new { @class = "form-control", placeholder = "Digite o Telefone." })
-                        @Html.ValidationMessageFor(m => m.rTelefone, null, new { @class = "text-danger" })
+                        @Html.TextBoxFor(m => m.rTelefone, new { @class = "form-control", placeholder = "Digite o telefone." })
                     </div>
                     <div class="col-md-4">
                         @Html.LabelFor(m => m.rCelular, new { @class = "form-label required" })
-                        @Html.TextBoxFor(m => m.rCelular, new { @class = "form-control", placeholder = "Digite o telefone." })
+                        @Html.TextBoxFor(m => m.rCelular, new { @class = "form-control", placeholder = "Digite o celular.." })
                         @Html.ValidationMessageFor(m => m.rCelular, null, new { @class = "text-danger" })
                     </div>
                 </div>
-                
-            
                 <div class="row mb-3">
                     <div class="col-md-4">
                             @Html.LabelFor(m => m.rRua, new { @class = "form-label" })
                             @Html.TextBoxFor(m => m.rRua, new { @class = "form-control", placeholder = "Digite a rua" })
-                            @Html.ValidationMessageFor(m => m.rRua, null, new { @class = "text-danger" })
                     </div>
                     <div class="col-md-4">
-                        @Html.LabelFor(m => m.cNumero, new { @class = "form-label" })
-                        @Html.TextBoxFor(m => m.cNumero, new { @class = "form-control", placeholder = "Digite o número da rua" })
+                        @Html.LabelFor(m => m.cNumero, new { @class = "form-label required" })
+                        @Html.TextBoxFor(m => m.cNumero, new { @class = "form-control", type = "number" ,placeholder = "Digite o número da rua" })
                         @Html.ValidationMessageFor(m => m.cNumero, null, new { @class = "text-danger" })
                     </div>
                     <div class="col-md-4">
                         @Html.LabelFor(m => m.rComplemento, new { @class = "form-label" })
                         @Html.TextBoxFor(m => m.rComplemento, new { @class = "form-control", placeholder = "Digite o complemento do imóvel" })
-                        @Html.ValidationMessageFor(m => m.rComplemento, null, new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -87,15 +79,14 @@
                         @Html.ValidationMessageFor(m => m.rObservacoes, null, new { @class = "text-danger" })
                     </div>
                 </div>
-
-            <div class="row mb-3"> 
-                <div class="col-md-6"> 
-                    <button type="submit" class="btn btn-success w-100">Salvar</button> 
-                </div> 
-                <div class="col-md-6"> 
-                    <button type="button" class="btn btn-secondary w-100" onclick="window.history.back()">Voltar</button> 
-                </div> 
-            </div>
+                <div class="row mb-3"> 
+                    <div class="col-md-6"> 
+                        <button type="submit" class="btn btn-success w-100">Salvar</button> 
+                    </div> 
+                    <div class="col-md-6"> 
+                        <button type="button" class="btn btn-secondary w-100" onclick="window.history.back()">Voltar</button> 
+                    </div> 
+                </div>
             </form>
     </div>
 
@@ -103,14 +94,34 @@
 @section Scripts {
     
     <script>
-    $(document).ready(function () {
+        $(document).ready(function () {
 
+            
             // Máscara para telefone
             $('#rCelular').mask('(00) 00000-0000');
             $('#rTelefone').mask('(00) 0000-0000');
-            
 
-    });
+            //Mascara dupla para CPF e CNPJ
+            var options = {
+                onKeyPress: function (cpf, ev, el, op) {
+                    var masks = ['000.000.000-000', '00.000.000/0000-00'];
+                    $('#rCpfCnpj').mask((cpf.length > 14) ? masks[1] : masks[0], op);
+                }
+            }
+            $('#rCpfCnpj').length > 11 ? $('#rCpfCnpj').mask('00.000.000/0000-00', options) : $('#rCpfCnpj').mask('000.000.000-00#', options);
+
+
+            // Impede que caracteres não-numéricos sejam digitados 
+            $('#cNumero').on('input', function (e) {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+
+            $('#rTipoCliente').select2();
+
+            //Valida o formulário usando jquery e validation
+            // Inicializa a validação do formulário 
+            $.validator.unobtrusive.parse("#formCliente");
+        });
 
         
 
