@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FreireTransportesCoreSolution")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b81745e8a6ab084163787875438a6bfcdd91d9d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84badf20b72d5b4dac3e38a9f1d55de9070f9f17")]
 [assembly: System.Reflection.AssemblyProductAttribute("FreireTransportesCoreSolution")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FreireTransportesCoreSolution")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

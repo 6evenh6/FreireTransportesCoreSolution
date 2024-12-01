@@ -126,8 +126,7 @@
               "RelativeToolTip": "FreireTransportesCoreSolution\\Views\\Cliente\\Cliente.cshtml",
               "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-30T16:20:26.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T16:20:26.698Z"
             },
             {
               "$type": "Document",
@@ -139,8 +138,7 @@
               "RelativeToolTip": "FreireTransportesCoreSolution\\Views\\Cliente\\Alterar.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-30T15:59:36.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T15:59:36.053Z"
             },
             {
               "$type": "Document",
@@ -152,8 +150,7 @@
               "RelativeToolTip": "FreireTransportesCoreSolution\\Views\\Cliente\\ListarClientes.cshtml",
               "ViewState": "AgIAACMAAAAAAAAAAAAewEUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-30T14:04:11.518Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T14:04:11.518Z"
             },
             {
               "$type": "Document",
@@ -165,8 +162,7 @@
               "RelativeToolTip": "FreireTransportesCoreSolution\\Program.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAWwDoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T14:03:56.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T14:03:56.669Z"
             },
             {
               "$type": "Document",
@@ -178,8 +174,7 @@
               "RelativeToolTip": "FreireTransportesCoreSolution\\Controllers\\ClienteController.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAqwDsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T16:04:45.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T16:04:45.118Z"
             },
             {
               "$type": "Document",
@@ -191,8 +186,7 @@
               "RelativeToolTip": "FreireTransportesCoreSolution\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAAACUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-30T14:06:12.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T14:06:12.593Z"
             },
             {
               "$type": "Document",
@@ -202,7 +196,7 @@
               "RelativeDocumentMoniker": "FreireTransportesCoreSolution\\Models\\ClienteRepository.cs",
               "ToolTip": "D:\\_Desenvolvimento\\FreireTransportesCoreSolution\\FreireTransportesCoreSolution\\Models\\ClienteRepository.cs",
               "RelativeToolTip": "FreireTransportesCoreSolution\\Models\\ClienteRepository.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAWwEwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T21:05:02.257Z",
               "EditorCaption": ""
