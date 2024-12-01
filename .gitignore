@@ -1,0 +1,52 @@
+
+# Compiled object files, libraries, resources, and temporary files
+bin/
+obj/
+
+# User-specific files
+*.user
+*.vspscc
+*.vssscc
+.vscode/
+.vs/
+
+# Build artifacts
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.ide
+*.suo
+
+# ASP.NET Core-specific
+wwwroot/
+**/appsettings.Development.json
+**/appsettings.Local.json
+
+# Rider / IntelliJ IDEA
+.idea/
+*.sln.iml
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Node.js modules
+node_modules/
+
+# Coverage and test results
+coverage/
+*.coverage
+*.testlog
+
+# Logs
+*.log
+
+# Publish outputs
+publish/
+*.Publish.xml
+
+# Other files and folders to ignore
+*.nupkg
+*.lock.json
